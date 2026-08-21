@@ -69,10 +69,4 @@ section#login > div#formulario {
         color: #c9c9c9;
 
     }
-
-    div#formulario > p {
-    font-size: 1.1em;
-    text-align: center;
-    font-style: italic;
-    color: #00000040;
 }
