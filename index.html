@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,40 +8,44 @@
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media-query.css">
 </head>
+
 <body>
     <main>
         <section id="login">
             <div id="imagem">
-                
+                <!-- Aqui vai a imagem nas CSS -->
             </div>
             <div id="formulario">
-                 <h1>Bem-vindo(a)</h1>
-                 <p>Faça login para acessar</p>
-                 <h1></h1>
-                 <form action="login.php" method="post" autocomplete="on">
+                <h1>Bem-vindo(a)</h1>
+                <p>Faça login para acessar</p>
+                <h1></h1>
+                <form action="login.php" method="post" autocomplete="on">
                     <div class="campo">
-                        <label for="ilogin"> 
-                        <img width="20" height="20" src="https://img.icons8.com/softteal-gradient/24/login-rounded-right.png" alt="login-rounded-right"/>
-                        </img>
-                        <input type="email" name="login" id="ilogin" placeholder="Email" autocomplete="email" required maxlength="30">
-                        </label>
-                       </div>
-                    </div>
-                    <h1></h1>
-                    <div class="campo">
-                        <label for="isenha">
-                            <img width="20" height="20" src="https://img.icons8.com/fluency/48/lock-2--v1.png" alt="lock-2--v1"/>
+                        <label for="ilogin">
+                            <img width="20" height="20" src="https://img.icons8.com/softteal-gradient/24/login-rounded-right.png"
+                                alt="login-rounded-right"/>
                             </img>
-                        <input type="password" name="senha" id="isenha" placeholder="Senha" autocomplete="current-password" required minlength="8" maxlength="20">
+                            <input type="email" name="login" id="ilogin" placeholder="Email" autocomplete="email"
+                                required maxlength="30">
                         </label>
-                        <h1></h1>
                     </div>
-                    <input type="submit" value="Entrar">
-                    <h1></h1>
-                    <a href= "esquecia.html">
-                        Esqueci a senha
+            <h1></h1>
+            <div class="campo">
+                <label for="isenha">
+                    <img width="20" height="20" src="https://img.icons8.com/fluency/48/lock-2--v1.png"
+                        alt="lock-2--v1" />
+                    </img>
+                    <input type="password" name="senha" id="isenha" placeholder="Senha" autocomplete="current-password"
+                        required minlength="8" maxlength="20">
+                </label>
             </div>
-
+            <input type="submit" value="Entrar">
+            <a href="esqueciasenha.html" class="botao">
+                Esqueci a senha
+            </a>
+                </form>
+            </div>
+        </section>        
     </main>
 </body>
 </html>

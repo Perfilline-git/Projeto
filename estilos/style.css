@@ -1,16 +1,10 @@
 @charset "UTF-8";
 
-/*
-    Paleta de Cores
-
-
-*/
-
-{
-    font-family: -apple-system, BlinkMacSystemFont, 'Poppins', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+* {   font-family: -apple-system, BlinkMacSystemFont, 'Poppins', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0px;
     margin: 0px;
-    box-sizing: border-box
+    box-sizing: border-box;
+    
 }
 
 body,html {
@@ -71,6 +65,32 @@ section#login > div#formulario {
         text-align: center;
         margin-bottom: 0.5px;
         color: #8b8989;
-
     }
+
+form > input[type=submit]{
+    font-size: 1em;
+    display:block;
+    width: 80%;
+    height: 40px;
+    background-color: #4091aa;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+form > input[type=submit]:hover {
+background-color: #9dd1e0;
+}
+form > a.botao {
+display: block;
+text-align: center;
+font-size: 1em;
+width: 80%;
+margin: 80px;
 }
