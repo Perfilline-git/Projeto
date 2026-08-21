@@ -32,11 +32,11 @@ section#login {
     transform: translate(-50%, -50%);
     overflow: hidden;
 
-    background-color: rgb(224, 218, 209);
+    background-color: #e0dad1;
     width: 380px;
     height: 490px;
     border-radius: 20px;
-    box-shadow: 0px 0px 70px rgba(4, 35, 63, 0.836);
+    box-shadow: 0px 0px 70px white;
     
     transition: width 1s, height 1s;
 
@@ -55,8 +55,23 @@ section#login > div#formulario {
     padding: 10px;
 }
 
-div#formulario >h1 {
+    div#formulario > p {
+    font-size: 1.1em;
     text-align: center;
-    margin-bottom: 10px;
+    font-style: italic;
+    color: #00000040;
+    }
 
+    div#formulario > h1 {
+        font-size: 2.2em; 
+        text-align: center;
+        margin-bottom: 10px;
+
+    }
+
+    div#formulario > p {
+    font-size: 1.1em;
+    text-align: center;
+    font-style: italic;
+    color: #00000040;
 }
