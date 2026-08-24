@@ -46,10 +46,10 @@ section#login {
 /* vv Início das configurações da imagem anexada ao quadrado externo vv */
 
 section#login > div#imagem {
-    display: block;
-    background-size: cover;
-    background-position: center;
     height: 100px;
+    background: #ffffff00 url(../imagens/perfilline.png) no-repeat;
+    background-position: bottom center;
+    background-size: 15%;
 }
 
  /* ^^ Fim das configurações da imagem anexada ao quadrado externo ^^ */
@@ -99,11 +99,11 @@ form > input[type=submit]{
     margin-top: 20px;
     margin-bottom: 20px;
     align-self: center;
-    ;
+    color: #000000;
 }
 
 form > input[type=submit]:hover {
-    background-color: #50a7be;
+    background-color: #acdae7;
 }
 
 /* ^^ Fim das configurações do botão "Enviar" ^^ */
@@ -114,12 +114,14 @@ input[type="email"] {
     width: 320px;
     height: 30px;
     border-radius: 7px;
+    background-color: #ffffff7a;
 }
 
 input[type="password"] {
     width: 115px;
     height: 30px;
     border-radius: 7px;
+    background-color: #ffffff7a;
 }
 
 /* ^^ Fim das configurações de tamanho dos campos "Email e Senha" ^^ */
@@ -142,7 +144,7 @@ form > a.botao {
     text-align: center;
     margin-top: 5px;
     font-style: italic;
-    color: #ffae00;
+    color: #ffd000;
 }
 
 /* ^^ Fim das configurações do campo "Esqueci minha senha" ^^ */
