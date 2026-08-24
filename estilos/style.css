@@ -1,17 +1,22 @@
+/* vv Início das configurações do Plano de fundo atrás do quadrado de "Login" vv */
+
 @charset "UTF-8";
 
-* {   font-family: -apple-system, BlinkMacSystemFont, 'Poppins', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+*{   font-family: -apple-system, BlinkMacSystemFont, 'Poppins', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0px;
     margin: 0px;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;  
 }
 
 body,html {
-    background-color: #4091aa;
+    background-color: white;
     height:100vh;
     width:100vw;
 }
+
+/* ^^ Fim das configurações do Plano de fundo atrás do quadrado de "Login" ^^ */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* vv Início das configurações do quadrado externo vv */
 
 main {
     position: relative;
@@ -26,71 +31,117 @@ section#login {
     transform: translate(-50%, -50%);
     overflow: hidden;
 
-    background-color: #ffffff;
+    background-color: #beb7fd00;
     width: 380px;
     height: 490px;
     border-radius: 20px;
-    box-shadow: 0px 0px 70px white;
-    
+    box-shadow: 0px 0px 70px rgb(0, 0, 0);
     transition: width 1s, height 1s;
 
 }
 
+/* ^^ Fim das configurações do quadrado externo ^^ */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* vv Início das configurações da imagem anexada ao quadrado externo vv */
+
 section#login > div#imagem {
     display: block;
-    background: gray url(../imagens/coleta.jpg) no-repeat;
+    background: #ffffff00 url(../imagens/coleta.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     height: 200px;
 }
 
-section#login > div#formulario {
+ /* ^^ Fim das configurações da imagem anexada ao quadrado externo ^^ */
+ /* -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+ /* vv Início das configurações das informações de Bem-vindo(a) e subtítulo de fazer login para acessar vv */
+
+ section#login > div#formulario {
     display: block;
     padding: 2px;
+    margin: 5px;
 }
+    div#formulario > h1 { /* Bem-vindo(a)*/
+        padding: 4px;
+        font-size: 2.2em; 
+        font-family: 'Gill Sans', Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
+        text-align: center;
+        margin-bottom: 0.5px;
+        color: #ffffff;
+        margin-top: 2px;
+    }
 
-    div#formulario > p {
+    
+    div#formulario > p { /* Faça seu login para acessar */
+    margin: 2px;
     font-size: 1.1em;
     font-family: 'Georgia', 'Times New Roman', Times, serif;
     text-align: center;
     margin-bottom: 2px;
     font-style: italic;
-    color: #00000040;
+    color: #24242457;
+    margin-top: 7px;
     }
-    
 
-    div#formulario > h1 {
-        font-size: 2.2em; 
-        font-family: 'Gill Sans', Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
-        text-align: center;
-        margin-bottom: 0.5px;
-        color: #8b8989;
-    }
+/* ^^ Fim das configurações das informações de Bem-vindo(a) e subtítulo de fazer login para acessar ^^ */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* vv Início das configurações do botão "Enviar" vv */
 
 form > input[type=submit]{
     font-size: 1em;
     display:block;
     width: 80%;
     height: 40px;
-    background-color: #4091aa;
+    background-color: #f59506;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-self: center;
+    ;
 }
 
 form > input[type=submit]:hover {
-background-color: #9dd1e0;
+    background-color: #50a7be;
 }
+
+/* ^^ Fim das configurações do botão "Enviar" ^^ */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* vv Início das configurações de tamanho dos campos "Email e Senha" vv */
+
+input[type="email"] {
+    width: 320px;
+    height: 30px;
+    border-radius: 7px;
+}
+
+input[type="password"] {
+    width: 125x;
+    height: 30px;
+    border-radius: 7px;
+}
+
+/* ^^ Fim das configurações de tamanho dos campos "Email e Senha" ^^ */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* vv Início das configurações de margem e espaçamento dos campos "Email e Senha vv */
+
+form {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* ^^ Fim das configurações de margem e espaçamento dos campos "Email e Senha ^^ */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* vv Início das configurações do campo "Esqueci minnha senha" vv */
+
 form > a.botao {
-display: block;
-text-align: center;
-font-size: 1em;
-width: 80%;
-margin: 80px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 5px;
 }
+
+/* ^^ Fim das configurações do campo "Esqueci minnha senha" ^^ */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
