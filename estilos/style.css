@@ -10,6 +10,7 @@
 
 body,html {
     background: #ffffff00 url(../imagens/site.jpg) no-repeat;
+    background-position: 40% 85%;
     height:100vh;
     width:100vw;
 }
