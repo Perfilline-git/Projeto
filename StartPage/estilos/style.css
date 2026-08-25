@@ -9,7 +9,7 @@
 }
 
 body,html {
-    background: #ffffff00 url(../imagens/site.jpg) no-repeat;
+    background: #ffffff00 url(../Startpage/imagens/site.jpg) no-repeat;
     background-position: 42% 60%;
     height:100vh;
     width:100vw;
@@ -46,7 +46,7 @@ section#login {
 
 section#login > div#imagem {
     height: 100px;
-    background: #ffffff00 url(../imagens/perfilline.png) no-repeat;
+    background: #ffffff00 url(../Startpage/imagens/perfilline.png) no-repeat;
     background-position: bottom center;
     background-size: 15%;
 }
