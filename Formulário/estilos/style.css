@@ -86,26 +86,45 @@ section#cadastro > div#imagem {
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* vv Início das configurações do botão "Enviar" vv */
 
-form > input[type=submit]{
+form input[type="submit"] {
     font-size: 1em;
-    display:block;
+    display: block;
     width: 80%;
     height: 40px;
     background-color: #f59506;
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    align-self: center;
+    margin: 20px auto;
     color: #000000;
 }
 
-form > input[type=submit]:hover {
+form input[type="submit"]:hover {
     background-color: #acdae7;
 }
 
 /* ^^ Fim das configurações do botão "Enviar" ^^ */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* vv Início das configurações do botão "Limpar" vv */
+
+form input[type="reset"] {
+    font-size: 1em;
+    display: block;
+    width: 20%;
+    height: 25px;
+    background-color: #f59506;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10;
+    color: #000000;
+}
+
+form input[type="reset"]:hover {
+    background-color: #acdae7;
+}
+
+/* ^^ Fim das configurações do botão "Limpar" ^^ */
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* vv Início das configurações de tamanho dos campos "Email e Senha" vv */
 

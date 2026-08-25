@@ -7,8 +7,7 @@
     <title>Formulário</title>
     <link rel="stylesheet" href="Formulário/estilos/style.css">
     <link rel="stylesheet" href="Formulário/estilos/media-query.css"
-</head>
-
+</head> 
 <body>
     <main>
         <section id="cadastro">
@@ -20,24 +19,43 @@
                 <p>Forneça dados para efetuar o cadastro</p>
                 <h1></h1>
                 <style>
-                    {
+                 *  {
                         font-family: Arial, Helvetica, sans-serif;
                     }
                 </style>
-                </head>
                 <body>
                     <form action="cadastro.php" autocomplete="off">
                         <p><label for="iuser">Usuário:</label>
+                            <h1></h1>
                             <input type="email" name="login" id="ilogin"
-                            required maxlength="31">
-                        </p>
-                        <p><label for="isenha">Senha:</label>
-                            <input type="password" name="senha" id="isenha">
-                        </p>
-                        </p>
-                        <p><label for="isenha">Confirmar senha:</label>
-                        <input type="password" name="senha" id="isenha">
-                        </p>
+                            required minlength="7" placeholder=" Email">
+                            <p>
+                                <label for="isenha">Senha:</label>
+                                <br>
+                                <input
+                                    type="password"
+                                    name="senha"
+                                    id="isenha"
+                                    minlength="8"
+                                    pattern="([a-z])*[A-Z])([0-9])([^A-Za-z0-9])"
+                                    autocomplete="current-password"
+                                    required
+                                >
+                            <p>
+                                <label for="iconfirmarsenha">Confirmar nova senha:</label>
+                                <br>
+                                <input
+                                    type="password"
+                                    name="confirmar_senha"
+                                    id="iconfirmarsenha"
+                                    minlength="8"
+                                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}"
+                                    title="A senha deve ter no mínimo 8 caracteres, uma letra maiúscula, uma letra minúscula, um número e um caractere especial."
+                                    autocomplete="new-password"
+                                    required
+                                    >
+                            </p>
+                        <p><input type="reset" value="Limpar"></p>
                         <p><input type="submit" value="Cadastrar"></p>
                     </form>
                 </body>
