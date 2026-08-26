@@ -157,3 +157,25 @@ form {
     }
 /* ^^ Fim das configurações de margem e espaçamento dos campos "Email e Senha ^^ */
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* vv Início das configurações do botão "Cadastrar" vv */
+
+form input[type="submit"] {
+    font-size: 1em;
+    display: block;
+    width: 80%;
+    height: 40px;
+    background-color: #f59506;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px auto;
+    color: #000000;
+}
+
+form input[type="submit"]:hover {
+    background-color: #acdae7;
+}
+
+/* ^^ Fim das configurações do botão "Cadastrar" ^^ */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/

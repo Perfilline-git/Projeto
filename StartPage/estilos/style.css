@@ -16,7 +16,9 @@ body,html {
 }
 
 /* ^^ Fim das configurações do Plano de fundo atrás do quadrado de "Login" ^^ */
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
 /* vv Início das configurações do quadrado externo vv */
 
 main {
@@ -41,6 +43,7 @@ section#login {
 }
 
 /* ^^ Fim das configurações do quadrado externo ^^ */
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* vv Início das configurações da imagem anexada ao quadrado externo vv */
 
@@ -52,7 +55,9 @@ section#login > div#imagem {
 }
 
  /* ^^ Fim das configurações da imagem anexada ao quadrado externo ^^ */
+
  /* -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
  /* vv Início das configurações das informações de Bem-vindo(a) e subtítulo de fazer login para acessar vv */
 
  section#login > div#formulario {
@@ -83,6 +88,7 @@ section#login > div#imagem {
     }
 
 /* ^^ Fim das configurações das informações de Bem-vindo(a) e subtítulo de fazer login para acessar ^^ */
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* vv Início das configurações do botão "Enviar" vv */
 
@@ -106,7 +112,9 @@ form > input[type=submit]:hover {
 }
 
 /* ^^ Fim das configurações do botão "Enviar" ^^ */
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
 /* vv Início das configurações de tamanho dos campos "Email e Senha" vv */
 
 input[type="email"] {
@@ -124,6 +132,7 @@ input[type="password"] {
 }
 
 /* ^^ Fim das configurações de tamanho dos campos "Email e Senha" ^^ */
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* vv Início das configurações de margem e espaçamento dos campos "Email e Senha vv */
 
@@ -135,6 +144,7 @@ form {
 }
 
 /* ^^ Fim das configurações de margem e espaçamento dos campos "Email e Senha ^^ */
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* vv Início das configurações dos ícones vv */
@@ -144,13 +154,14 @@ label img {
     top: 5px;
 }
 /* ^^ Fim das configurações dos ícones ^^ */
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* vv Início das configurações do campo "Esqueci minha senha" vv */
 
 form > a.botao {
     text-decoration: none;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 0px;
     font-style: italic;
     color: #ffd000;
 }
