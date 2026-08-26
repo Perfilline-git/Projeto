@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +24,7 @@
                     }
                 </style>
                 <body>
-                    <form action="cadastro.php" autocomplete="off">
+                    <form action="index.html" autocomplete="off">
                         <p>
                             <label for="iuser">Usuário:</label>
                             <br>
@@ -33,7 +32,7 @@
                         <p>
                             <label for="isenha">Senha:</label>
                             <br>
-                            <input type="password" name="senha" id="isenha" minlength="8"
+                            <input type="password" name="senha" id="isenha" minlength="4"
                                 pattern="([a-z])*[A-Z])([0-9])([^A-Za-z0-9])" autocomplete="current-password" required>
                         <p><label for="iconfirmarsenha">Confirmar nova senha:</label>
                             <br>
@@ -43,9 +42,7 @@
                                 autocomplete="new-password" required>
                         </p>
                         <p><input type="reset" value="Limpar" onclick="alert('Os dados foram limpos! 🧹☁️😶‍🌫️')">
-                        </p>
-                        <form onsubmit="history.back(); return true;">
-                            <p><input type="submit" value="Cadastrar">
+                        </p><p><input type="submit" value="Cadastrar">
                                 </button>
                             </p>
                         </form>
