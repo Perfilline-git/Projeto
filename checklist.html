@@ -1,65 +1,1119 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="Checklist/imagens/Forms.png" type="image/x-icon">
+
     <title>Checklist</title>
-    <link rel="stylesheet" href="Forms/estilos/style.css">
-    <link rel="stylesheet" href="Forms/estilos/media-query.css">
 
     <style>
+        /* ==================================================
+           CONFIGURAÇÃO GERAL
+        ================================================== */
+
         * {
-            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
         }
+
+        body {
+
+
+            /* ==================================================   
+           CONTAINER
+        ================================================== */
+
+            .container {
+                width: 100%;
+                max-width: 520px;
+                margin: auto;
+            }
+
+
+            /* ==================================================
+           TÍTULO
+        ================================================== */
+
+            h1 {
+                margin: 0 0 6px;
+                text-align: center;
+                font-size: 23px;
+            }
+
+            .subtitle {
+                margin-bottom: 24px;
+                text-align: center;
+                color: #6b7280;
+                font-size: 14px;
+            }
+
+
+            /* ==================================================
+           CAMPOS
+        ================================================== */
+
+            .campo {
+                margin-bottom: 17px;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 7px;
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+
+            /* ==================================================
+           CAMPOS NORMAIS
+        ================================================== */
+
+            input,
+            select {
+                width: 100%;
+                height: 50px;
+                padding: 0 13px;
+
+                border: 1px solid #d1d5db;
+                border-radius: 10px;
+
+                font-size: 16px;
+
+                color: #202124;
+            }
+
+            input:focus,
+            select:focus {
+                outline: none;
+                border-color: #2563eb;
+            }
+
+
+            /* ==================================================
+           CAMPOS MARCADOS EM VERMELHO
+           MESMO ESTILO DA SEGUNDA IMAGEM
+        ================================================== */
+
+            .campo-estilo-login {
+                width: 100%;
+                height: 30px;
+
+                padding: 0 7px;
+
+                background: rgba(255, 255, 255, 0.30);
+
+                border: 2px solid #111;
+                border-radius: 5px;
+
+                color: #000;
+
+                font-size: 14px;
+
+                outline: none;
+
+                box-shadow: none;
+            }
+
+            .campo-estilo-login::placeholder {
+                color: #333;
+                opacity: 1;
+            }
+
+            .campo-estilo-login:focus {
+                outline: none;
+
+                border-color: #111;
+
+                box-shadow: none;
+            }
+
+
+            /* ==================================================
+           CPF / CNPJ
+        ================================================== */
+
+            .documento {
+                display: grid;
+                grid-template-columns: 110px 1fr;
+                gap: 10px;
+            }
+
+
+            /* ==================================================
+           BOTÕES DE OPÇÃO
+        ================================================== */
+
+            .opcoes {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .opcao input {
+                display: none;
+            }
+
+            .opcao label {
+                height: 50px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                border: 1px solid #d1d5db;
+                border-radius: 10px;
+
+                cursor: pointer;
+                transition: 0.2s;
+            }
+
+            .opcao input:checked+label {
+                background: #f59506;
+                border-color: #f59506;
+            }
+
+
+            /* ==================================================
+           CAMPOS DINÂMICOS
+        ================================================== */
+
+            .campo-dinamico {
+                display: none;
+
+                margin-top: 12px;
+                padding: 12px;
+
+                background: #f8fafc;
+                border: 1px solid #e5e7eb;
+                border-radius: 10px;
+            }
+
+            .campo-dinamico.mostrar {
+                display: block;
+            }
+
+
+            /* ==================================================
+           BOTÃO REGISTRAR
+        ================================================== */
+
+            button {
+                width: 100%;
+                height: 54px;
+
+                margin-top: 8px;
+
+                border: none;
+                border-radius: 11px;
+
+                background: #2856b9;
+
+                font-size: 17px;
+                font-weight: bold;
+
+                cursor: pointer;
+            }
+
+            button:hover {
+                background: #f59506;
+            }
+
+
+            /* ==================================================
+           MENSAGEM
+        ================================================== */
+
+            #mensagem {
+                display: none;
+
+                margin-top: 15px;
+                padding: 13px;
+
+                border-radius: 10px;
+                text-align: center;
+
+                font-size: 14px;
+            }
+
+            #mensagem.sucesso {
+                display: block;
+                background: #dcfce7;
+                color: #166534;
+            }
+
+            #mensagem.erro {
+                display: block;
+                background: #fee2e2;
+                color: #991b1b;
+            }
+
+
+            /* ==================================================
+           CELULAR
+        ================================================== */
+
+            @media (max-width: 400px) {
+
+                body {
+                    padding: 10px;
+                }
+
+                .card {
+                    padding: 17px;
+                }
+
+                .documento {
+                    grid-template-columns: 95px 1fr;
+                }
+
+            }
+
+            </body>
     </style>
+
 </head>
 
+
 <body>
-    <main>
-        <section id="cadastro">
 
-            <div id="imagem">
-                <!-- Aqui vai a imagem nas CSS -->
+
+    <div class="container">
+
+        <div class="card">
+
+
+            <!-- ==================================================
+             TÍTULO
+        ================================================== -->
+
+            <h1>Controle de Coleta Perfilline</h1>
+
+            <div class="subtitle">
+                Preencha as informações para completar o checklist
             </div>
 
-            <div id="formulario">
 
-                <h1>Checklist</h1>
+            <!-- ==================================================
+             FORMULÁRIO
+        ================================================== -->
 
-                <p>Forneça os dados para efetuar o checklist</p>
+            <form id="formulario">
 
-                <form action="" method="get" autocomplete="on">
 
-                    <p>
-                        <label for="inome">Nome:</label>
-                        <br>
-                        <input type="text" name="nome" id="inome" required maxlength="30" placeholder="Nome completo"
-                            autocomplete="name">
-                    </p>
-                    <p>
-                        <label for="imedia">Média:</label>
-                        <br>
-                        <input type="number" name="media" id="imedia" min="0" max="10" step="0.1" value=""
-                            placeholder="0 a 10" required>
-                    </p>
-                    <p>
-                        <label for="imes">Período Letivo:</label>
-                        <br>
-                        <input type="month" name="mes" id="imes" value="">
-                    </p>
-                    <p>
-                        <label for="idia">Dia da Prova:</label>
-                        <br>
-                        <input type="date" name="dia" id="idia">
-                    </p>
-                    <input type="reset" value="Limpar" onclick="alert('Os dados foram limpos! 🧹☁️😶‍🌫️')">
-                    <p>
-                        <input type="submit" value="Cadastrar">
-                    </p>
-                </form>
-            </div>
-        </section>
-    </main>
+                <!-- DATA -->
+
+                <div class="campo">
+
+                    <label for="data">
+                        Data
+                    </label>
+
+                    <input type="date" id="data" required>
+
+                </div>
+
+
+                <!-- RECEBEDOR -->
+
+                <div class="campo">
+
+                    <label for="recebedor">
+                        Nome do Recebedor
+                    </label>
+
+                    <input type="text" id="recebedor" class="campo-estilo-login" placeholder="Digite o nome" required>
+
+                </div>
+
+
+                <!-- CPF / CNPJ -->
+
+                <div class="campo">
+
+                    <label>
+                        Documento
+                    </label>
+
+                    <div class="documento">
+
+                        <select id="tipoDocumento">
+
+                            <option value="CNPJ">
+                                CNPJ
+                            </option>
+
+                            <option value="CPF">
+                                CPF
+                            </option>
+
+                        </select>
+
+
+                        <input type="text" id="documento" class="campo-estilo-login" placeholder="Digite o CNPJ"
+                            inputmode="numeric" maxlength="14" required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==================================================
+                 OPERAÇÃO
+            ================================================== -->
+
+                <div class="campo">
+
+                    <label>
+                        Local da Operação
+                    </label>
+
+
+                    <div class="opcoes">
+
+
+                        <!-- COLETA -->
+
+                        <div class="opcao">
+
+                            <input type="radio" id="coleta" name="operacao" value="Coleta" required>
+
+                            <label for="coleta">
+                                Coleta
+                            </label>
+
+                        </div>
+
+
+                        <!-- ENTREGA -->
+
+                        <div class="opcao">
+
+                            <input type="radio" id="entrega" name="operacao" value="Entrega">
+
+                            <label for="entrega">
+                                Entrega
+                            </label>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- LOCAL DA COLETA -->
+
+                    <div id="campoColeta" class="campo-dinamico">
+
+                        <label for="localColeta">
+                            Local da Coleta
+                        </label>
+
+                        <input type="text" id="localColeta" class="campo-estilo-login" placeholder="Digite o local">
+
+                    </div>
+
+
+                    <!-- LOCAL DA ENTREGA -->
+
+                    <div id="campoEntrega" class="campo-dinamico">
+
+                        <label for="localEntrega">
+                            Local da Entrega
+                        </label>
+
+                        <input type="text" id="localEntrega" class="campo-estilo-login" placeholder="Digite o local">
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- ==================================================
+                 MOVIMENTO
+            ================================================== -->
+
+                <div class="campo">
+
+                    <label>
+                        Movimento
+                    </label>
+
+
+                    <div class="opcoes">
+
+
+                        <!-- ENTRADA -->
+
+                        <div class="opcao">
+
+                            <input type="radio" id="entrada" name="movimento" value="Entrada" required>
+
+                            <label for="entrada">
+                                Entrada
+                            </label>
+
+                        </div>
+
+
+                        <!-- SAÍDA -->
+
+                        <div class="opcao">
+
+                            <input type="radio" id="saida" name="movimento" value="Saída">
+
+                            <label for="saida">
+                                Saída
+                            </label>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- HORA DE ENTRADA -->
+
+                    <div id="campoEntrada" class="campo-dinamico">
+
+                        <label for="horaEntrada">
+                            Hora de Entrada
+                        </label>
+
+                        <input type="time" id="horaEntrada" class="campo-estilo-login">
+
+                    </div>
+
+
+                    <!-- HORA DE SAÍDA -->
+
+                    <div id="campoSaida" class="campo-dinamico">
+
+                        <label for="horaSaida">
+                            Hora de Saída
+                        </label>
+
+                        <input type="time" id="horaSaida" class="campo-estilo-login">
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- ==================================================
+                 PLACA
+            ================================================== -->
+
+                <div class="campo">
+
+                    <label for="placa">
+                        Placa
+                    </label>
+
+                    <input type="text" id="placa" class="campo-estilo-login" placeholder="ABC1D23" maxlength="7"
+                        required>
+
+                </div>
+
+
+                <!-- ==================================================
+                 BOTÃO
+            ================================================== -->
+
+                <button type="submit">
+                    Registrar
+                </button>
+
+
+                <!-- MENSAGEM -->
+
+                <div id="mensagem"></div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+
+        /* ==========================================================
+           INICIALIZAÇÃO
+        ========================================================== */
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            colocarDataAtual();
+
+            configurarOperacao();
+
+            configurarMovimento();
+
+            configurarDocumento();
+
+            configurarPlaca();
+
+            configurarFormulario();
+
+        });
+
+
+        /* ==========================================================
+           DATA ATUAL
+        ========================================================== */
+
+        function colocarDataAtual() {
+
+            const hoje = new Date();
+
+            const ano = hoje.getFullYear();
+
+            const mes = String(
+                hoje.getMonth() + 1
+            ).padStart(2, "0");
+
+            const dia = String(
+                hoje.getDate()
+            ).padStart(2, "0");
+
+            document.getElementById("data").value =
+                `${ano}-${mes}-${dia}`;
+        }
+
+
+        /* ==========================================================
+           COLETA / ENTREGA
+        ========================================================== */
+
+        function configurarOperacao() {
+
+            const radios =
+                document.querySelectorAll(
+                    'input[name="operacao"]'
+                );
+
+
+            radios.forEach(function (radio) {
+
+                const label =
+                    document.querySelector(
+                        `label[for="${radio.id}"]`
+                    );
+
+
+                label.addEventListener(
+                    "click",
+                    function (evento) {
+
+                        if (radio.checked) {
+
+                            evento.preventDefault();
+
+                            const campo =
+                                radio.value === "Coleta"
+                                    ? "campoColeta"
+                                    : "campoEntrega";
+
+                            const elemento =
+                                document.getElementById(campo);
+
+                            elemento.classList.toggle("mostrar");
+
+                            return;
+
+                        }
+
+
+                        esconder("campoColeta");
+
+                        esconder("campoEntrega");
+
+                        radio.checked = true;
+
+
+                        if (radio.value === "Coleta") {
+
+                            mostrar("campoColeta");
+
+                        }
+
+
+                        if (radio.value === "Entrega") {
+
+                            mostrar("campoEntrega");
+
+                        }
+
+                    }
+                );
+
+            });
+
+        }
+
+
+        /* ==========================================================
+           ENTRADA / SAÍDA
+        ========================================================== */
+
+        function configurarMovimento() {
+
+            const radios =
+                document.querySelectorAll(
+                    'input[name="movimento"]'
+                );
+
+
+            radios.forEach(function (radio) {
+
+                const label =
+                    document.querySelector(
+                        `label[for="${radio.id}"]`
+                    );
+
+
+                label.addEventListener(
+                    "click",
+                    function (evento) {
+
+                        if (radio.checked) {
+
+                            evento.preventDefault();
+
+                            const campo =
+                                radio.value === "Entrada"
+                                    ? "campoEntrada"
+                                    : "campoSaida";
+
+                            const elemento =
+                                document.getElementById(campo);
+
+                            elemento.classList.toggle("mostrar");
+
+                            return;
+
+                        }
+
+
+                        esconder("campoEntrada");
+
+                        esconder("campoSaida");
+
+                        radio.checked = true;
+
+
+                        if (radio.value === "Entrada") {
+
+                            mostrar("campoEntrada");
+
+                        }
+
+
+                        if (radio.value === "Saída") {
+
+                            mostrar("campoSaida");
+
+                        }
+
+                    }
+                );
+
+            });
+
+        }
+
+
+        /* ==========================================================
+           MOSTRAR / ESCONDER
+        ========================================================== */
+
+        function mostrar(id) {
+
+            document
+                .getElementById(id)
+                .classList.add("mostrar");
+
+        }
+
+
+        function esconder(id) {
+
+            document
+                .getElementById(id)
+                .classList.remove("mostrar");
+
+        }
+
+
+        /* ==========================================================
+           CPF / CNPJ
+        ========================================================== */
+
+        function configurarDocumento() {
+
+            const tipo =
+                document.getElementById("tipoDocumento");
+
+
+            const documento =
+                document.getElementById("documento");
+
+
+            tipo.addEventListener(
+                "change",
+                function () {
+
+                    documento.value = "";
+
+
+                    if (this.value === "CPF") {
+
+                        documento.maxLength = 11;
+
+                        documento.placeholder =
+                            "Digite o CPF";
+
+                    } else {
+
+                        documento.maxLength = 14;
+
+                        documento.placeholder =
+                            "Digite o CNPJ";
+
+                    }
+
+                }
+            );
+
+
+            documento.addEventListener(
+                "input",
+                function () {
+
+                    this.value =
+                        this.value
+                            .replace(/\D/g, "");
+
+                }
+            );
+
+        }
+
+
+        /* ==========================================================
+           PLACA
+        ========================================================== */
+
+        function configurarPlaca() {
+
+            const placa =
+                document.getElementById("placa");
+
+
+            placa.addEventListener(
+                "input",
+                function () {
+
+                    this.value =
+                        this.value
+                            .replace(/[^a-zA-Z0-9]/g, "")
+                            .toUpperCase()
+                            .substring(0, 7);
+
+                }
+            );
+
+        }
+
+
+        /* ==========================================================
+           FORMULÁRIO
+        ========================================================== */
+
+        function configurarFormulario() {
+
+            const formulario =
+                document.getElementById("formulario");
+
+
+            formulario.addEventListener(
+                "submit",
+                function (evento) {
+
+                    evento.preventDefault();
+
+
+                    if (!validarFormulario()) {
+
+                        return;
+
+                    }
+
+
+                    const dados = obterDados();
+
+                }
+            );
+
+        }
+
+
+        /* ==========================================================
+           VALIDAR FORMULÁRIO
+        ========================================================== */
+
+        function validarFormulario() {
+
+            const tipo =
+                document.getElementById(
+                    "tipoDocumento"
+                ).value;
+
+
+            const documento =
+                document.getElementById(
+                    "documento"
+                ).value;
+
+
+            const quantidade =
+                tipo === "CPF"
+                    ? 11
+                    : 14;
+
+
+            if (documento.length !== quantidade) {
+
+                mostrarMensagem(
+                    `O ${tipo} deve conter ${quantidade} dígitos.`,
+                    "erro"
+                );
+
+                return false;
+
+            }
+
+
+            const operacao =
+                document.querySelector(
+                    'input[name="operacao"]:checked'
+                );
+
+
+            if (!operacao) {
+
+                mostrarMensagem(
+                    "Selecione Coleta ou Entrega.",
+                    "erro"
+                );
+
+                return false;
+
+            }
+
+
+            if (operacao.value === "Coleta") {
+
+                const local =
+                    document.getElementById(
+                        "localColeta"
+                    ).value.trim();
+
+
+                if (!local) {
+
+                    mostrarMensagem(
+                        "Informe o local da coleta.",
+                        "erro"
+                    );
+
+                    return false;
+
+                }
+
+            }
+
+
+            if (operacao.value === "Entrega") {
+
+                const local =
+                    document.getElementById(
+                        "localEntrega"
+                    ).value.trim();
+
+
+                if (!local) {
+
+                    mostrarMensagem(
+                        "Informe o local da entrega.",
+                        "erro"
+                    );
+
+                    return false;
+
+                }
+
+            }
+
+
+            const movimento =
+                document.querySelector(
+                    'input[name="movimento"]:checked'
+                );
+
+
+            if (!movimento) {
+
+                mostrarMensagem(
+                    "Selecione Entrada ou Saída.",
+                    "erro"
+                );
+
+                return false;
+
+            }
+
+
+            if (movimento.value === "Entrada") {
+
+                const hora =
+                    document.getElementById(
+                        "horaEntrada"
+                    ).value;
+
+
+                if (!hora) {
+
+                    mostrarMensagem(
+                        "Informe a hora de entrada.",
+                        "erro"
+                    );
+
+                    return false;
+
+                }
+
+            }
+
+
+            if (movimento.value === "Saída") {
+
+                const hora =
+                    document.getElementById(
+                        "horaSaida"
+                    ).value;
+
+
+                if (!hora) {
+
+                    mostrarMensagem(
+                        "Informe a hora de saída.",
+                        "erro"
+                    );
+
+                    return false;
+
+                }
+
+            }
+
+
+            return true;
+
+        }
+
+
+        /* ==========================================================
+           PEGAR DADOS
+        ========================================================== */
+
+        function obterDados() {
+
+            const operacao =
+                document.querySelector(
+                    'input[name="operacao"]:checked'
+                ).value;
+
+
+            const movimento =
+                document.querySelector(
+                    'input[name="movimento"]:checked'
+                ).value;
+
+
+            const dados = {
+
+                data:
+                    document.getElementById("data").value,
+
+                recebedor:
+                    document.getElementById("recebedor").value,
+
+                tipoDocumento:
+                    document.getElementById("tipoDocumento").value,
+
+                documento:
+                    document.getElementById("documento").value,
+
+                operacao:
+                    operacao,
+
+                localColeta:
+                    document.getElementById("localColeta").value,
+
+                localEntrega:
+                    document.getElementById("localEntrega").value,
+
+                movimento:
+                    movimento,
+
+                horaEntrada:
+                    document.getElementById("horaEntrada").value,
+
+                horaSaida:
+                    document.getElementById("horaSaida").value,
+
+                placa:
+                    document.getElementById("placa").value
+
+            };
+
+
+            return dados;
+
+        }
+
+
+        /* ==========================================================
+           MENSAGEM
+        ========================================================== */
+
+        function mostrarMensagem(
+            texto,
+            tipo
+        ) {
+
+            const mensagem =
+                document.getElementById(
+                    "mensagem"
+                );
+
+
+            mensagem.textContent = texto;
+
+            mensagem.className = tipo;
+
+        }
+
+    </script>
+
 </body>
+
 </html>
